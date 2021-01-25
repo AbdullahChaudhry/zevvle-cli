@@ -1,0 +1,33 @@
+{
+  "name": "zevvle-cli",
+  "version": "1.0.0",
+  "description": "The unofficial Zevvle CLI",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdullahChaudhry/zevvle-cli.git"
+  },
+  "bin": {
+    "zevvle": "./lib/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdullahChaudhry/zevvle-cli/issues"
+  },
+  "homepage": "https://github.com/AbdullahChaudhry/zevvle-cli#readme",
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "dotenv": "^8.2.0",
+    "zevvle-sdk-node": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/argparse": "^2.0.5",
+    "typescript": "^4.1.3"
+  }
+}
