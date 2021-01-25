@@ -1,6 +1,6 @@
 {
   "name": "zevvle-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The unofficial Zevvle CLI",
   "main": "./lib/index.js",
   "scripts": {
@@ -14,7 +14,10 @@
   "bin": {
     "zevvle": "./lib/index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "zevvle",
+    "cli"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
