@@ -1,0 +1,33 @@
+export interface SIMCardModel {
+  id: string,
+  user_id: string,
+  account_id: string,
+  msisdn: string,
+  iccid: string,
+  emoji: string,
+  status: string,
+  name: string,
+  settings: {
+    sms: boolean,
+    mms: boolean,
+    data: string,
+    voice_geographic: boolean,
+    voice_mobile: boolean,
+    voice_non_geographic: boolean,
+    voicemail: boolean,
+    call_holding: boolean,
+    call_waiting: boolean,
+    calling_line_identity: boolean,
+    voice_sms_bundle: boolean,
+    international: string,
+    eea_data: boolean,
+    eea_sms: boolean,
+    eea_outgoing_call: boolean,
+    eea_incoming_call: boolean,
+    row_outgoing_call: boolean,
+    row_incoming_call: boolean,
+    row_sms: boolean
+  },
+  modifying: boolean,
+activated_at: string
+}
