@@ -27,7 +27,7 @@
   "dependencies": {
     "argparse": "^2.0.1",
     "dotenv": "^8.2.0",
-    "zevvle-sdk-node": "^1.1.1"
+    "zevvle-sdk-node": "^1.1.3"
   },
   "devDependencies": {
     "@types/argparse": "^2.0.5",
