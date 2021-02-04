@@ -3,7 +3,7 @@
 import dotenv from 'dotenv'
 import { ArgumentParser} from 'argparse'
 
-import { zevvle } from 'zevvle-sdk-node'
+import { Zevvle } from 'zevvle-sdk-node'
 import { ArgumentsModel, ResultModel } from './models'
 
 dotenv.config()
@@ -13,16 +13,25 @@ async function start() {
   const zevvleKey = <string>process.env.ZEVVLE_KEY
   const zevvleUrl = process.env.ZEVVLE_URL
 
-  parser = new ArgumentParser({ description: "A Node interface to the Zevvle API" })
+  parser = new ArgumentParser({ 
+    description: "A Node interface to the Zevvle API",
+    prog: "zevvle",
+    usage: "%(prog)s [options]"
+  })
+  
   parser.add_argument('--get-account', { help: 'Get details for a Zevvle account ID.' });
   parser.add_argument('--get-user', { help: 'Get details for a Zevvle user ID.' });
   parser.add_argument('--get-sim', { help: 'Get details for a Zevvle SIM card ID.' });
   parser.add_argument('--list-sim-cards', { help: 'List Zevvle SIM cards for the API key.' });
-  
-  const zev = new zevvle(zevvleKey, zevvleUrl)
 
+  parser.set_defaults({
+    
+  })
+  
   const args: ArgumentsModel = parser.parse_args()
   let result: ResultModel = {}
+
+  const zev = new Zevvle(zevvleKey, zevvleUrl)
 
   if (args.get_account) {
     result["account"] = await zev.getAccount(args.get_account)
