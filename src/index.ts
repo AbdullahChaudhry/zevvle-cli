@@ -24,9 +24,7 @@ async function start() {
   parser.add_argument('--get-sim', { help: 'Get details for a Zevvle SIM card ID.' });
   parser.add_argument('--list-sim-cards', { help: 'List Zevvle SIM cards for the API key.' });
 
-  parser.set_defaults({
-    
-  })
+  parser.set_defaults({})
   
   const args: ArgumentsModel = parser.parse_args()
   let result: ResultModel = {}
