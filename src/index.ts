@@ -10,8 +10,10 @@ dotenv.config()
 let parser: ArgumentParser
 
 async function start() {
-  const zevvleKey = <string>process.env.ZEVVLE_KEY
-  const zevvleUrl = process.env.ZEVVLE_URL
+  const zevvleKey: string = <string>process.env.ZEVVLE_KEY
+  const zevvleUrl: string = <string>process.env.ZEVVLE_URL
+
+  const zevvleAccount: string = <string>process.env.ZEVVLE_ACCOUNT
 
   parser = new ArgumentParser({ 
     description: "A Node interface to the Zevvle API",
@@ -32,7 +34,7 @@ async function start() {
   const zev = new Zevvle(zevvleKey, zevvleUrl)
 
   if (args.get_account) {
-    result["account"] = await zev.getAccount(args.get_account)
+    result["account"] = await zev.getAccount(zevvleAccount)
   }
 
   if (args.get_user) {
